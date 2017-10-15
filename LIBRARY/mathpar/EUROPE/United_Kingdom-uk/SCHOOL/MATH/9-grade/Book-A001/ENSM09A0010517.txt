@@ -1,0 +1,195 @@
+"PAGE EN-SM-09-A001-0517 Trigonometric functions: Numeric circle
+$$ \bf \hbox {§17. Trigonometric functions. Numeric circle} $$
+
+ $ \ \ \ \$ Studying the course of algebra, you have so far dealt with algebraic functions, that is, Functions whose analytical record used algebraic operations on numbers and variables (addition, subtraction, multiplication, division, exponentiation, extraction of a square or cubic root). But mathematical models of real situations are often related to functions of a different type, not algebraic ones. With the first representatives of the class of non-algebraic functions - trigonometric functions - we will become acquainted in this chapter.
+$ $
+ $ \ \ \ \$ To introduce trigonometric functions we need a new mathematical model - a numerical circle.
+First, let's look at a concrete example. We will consider the stadium's track as a circle with a length of 400 m. Start-point A is marked (Figure 97). The runner from point A moves around the circle in a counter-clockwise direction. Where will it be in 200 m, 800 m, 1500 m? And where it is necessary to carry out the finishing line, if he runs a marathon distance of 42 km 195 m?
+$ $
+$ \bf Drawing \ 97 $
+$ $ "
+SPACE=R64[x];\set2D(-2, 2, -1.1, 1.1,[1,1,20,1,1]);f = \paramPlot([\sin(x), \cos(x)], [0, 2.5\pi]);
+d=\paramPlot([1.2*\sin(x), 1.2*\cos(x)], [\pi/4, \pi/2.5]);a= \tablePlot([[0.88, 0.84],[0.81, 0.86]],'arrow');
+f1 = \pointsPlot ([[1,0,-1,0,-0.96],[0,1,0,-1,0.3]], ['A','B','C','D','M'],[1,1,7,4,7]);
+ \showPlots([f,d,a,f1 ]);
+"---"
+
+"==="
+"PAGE 2
+ $ \ \ \ \$ After 200 m, the runner will be at the point $ C $ at the diametrically opposite point $ A $ (200 m is the length of the half of the treadmill, that is, the length of half the circle). Running 400 m, he will return to the point $ A $; Running 800 m, he will again be at the point $ A $. At the same time, 1500 m are three "circles" (1200 m) plus another 300 m, i.e. 3/4 of the treadmill. The finish of this distance will be at point D.
+$ $
+ $ \ \ \ \$ We have to calculate where the finish of the marathon distance is. Running 105 laps, the athlete will overcome the path of 42 km, and to the finish will remain 195 m, this is 5 m less than the length of half the circumference. Hence, the finish of the marathon distance will be at point M, located near point C (Figure 97).
+ $ \ \ \ \$ You can run the path of any length along the stadium's treadmill. Hence, any positive number corresponds to some point - the "finish of the distance." Moreover, it is possible to assign a point on the circle to any negative number: just have to force the athlete to run in the opposite direction, ie, start from the point $ A $ in the clockwise direction. Then the stadium track can be considered as a numerical circle.
+In principle, any circle can be considered as a numerical one, but it is most convenient to use for this purpose a single circle - a circle with a radius of $ 1 $. This will be our "treadmill". The length $ L $ of a circle of radius $ R $ is calculated by the formula $ L = 2 \pi R $. If $ R = 1 $, then $ L = 2 \pi $.
+$ $
+ The length of a half of the circle is $ \pi $, and the length of a quarter of the circle is $ AB $, $ BC $, $ CD $, $ DA $, (Figure 98) - equal to $ \pi $ We agree to call the arc $ AB $ - - the first quarter of the unit circle, the arc $ BC $ - the second quarter, the arc $ CD $ - the third quarter, the arc $ DA $ - the fourth quarter (Figure 98). This usually refers to an open arc, that is, an arc without its ends.
+$ $
+$ \bf Definition $. Given a single circle, the initial point A is marked on it - the right end of the horizontal diameter (Figure 98). We assign to each real number t the point M of the circle according to the following rule:
+1) if $ t> 0 $, then moving from the point $ A $ in the counterclockwise direction (the positive direction of the circumference), we describe a path of length $ t $ along the circumference; The final point $ M $ of this path is the required point:
+$ M = M (t) $;
+2) if $ t <0 $, then moving from the point $ A $ in the clockwise direction (the negative direction of the circumference), we describe along the circumference a path of length $ | t | $; The end point M of this path is the required point: $ M = M (t) $;
+3) we put the point $ A: A = A (0) $ into the number $ t = 0 $. A unit circle with established correspondence (between real numbers and points of a circle) will be called a numerical circle.
+$ $
+$ \bf Figure \ 98 $
+$ $
+$ $ "
+\set2D(-1.5, 1.5, -1.1, 1.1, [1,1,20,1,1]); f = \paramPlot([\sin(x),\cos(x)], [0, 2\pi]);
+f1 = \pointsPlot ([[1,0,-1,0,1.25,-1.25,-1.25,1.25],[0,1,0,-1,0.9,0.9,-0.9,-0.9]], ['A','B','C','D','I','II','III','IV'],[1,1,7,4],[0,0,-1,1]);  \showPlots([f,f1]);
+"---"
+
+"==="
+"PAGE 3
+$ \bf Example \ 1. $
+ Find on the numeric circle a point that corresponds to a given number: $ \frac {\pi} {2} $; $ \pi $; $ \frac {3 \pi} {2} $; $ 2 \pi $; $ \frac {7 \pi} {2} $; $ 9 \pi $; $ - \frac {3 \pi} {2} $
+$ \bf Solution. $
+ $ \ \ \ \$ Since the first six of the given seven numbers are positive, to find the corresponding points of the circle, you need to traverse the path of a given length, moving from the point $ A $ in the positive direction (Fig. 98). We take into account that the length of each quarter of the unit circle is equal to $ \frac {\pi} {2} $. Then the number $ \frac {\pi} {2} $ corresponds to the point $ B $; The point $ C $ corresponds to the number $ \pi $; The point $ D $ corresponds to the number.
+The $ 2 \pi $ corresponds to the point $ A $, since, after traversing a path of length $ 2 \pi $ along the circumference, we again get to the initial point $ A $.
+$ $
+$ \frac {7 \pi} {2} = 2 \pi + \frac {3 } {2} \pi$
+$ $
+Hence, moving from point A in the positive direction, it is necessary to go through a whole circle (a path of length $ 2 \pi $ and another path of length $ \frac {3} {2} \pi$, which, as we saw above, will end at point D.
+$ $
+$ 9 \pi = 4 * 2 \pi + \pi $
+$ $
+ Hence, moving from the point A in the positive direction, we need to describe four times a whole circle (a path of length $ 4 * 2 \pi $) and another path of length $ \pi $, which, as we saw above, ends at $ C $.
+$ $
+It remains to find a point on the numerical circle corresponding to a given negative number $ - \frac {3} {2}\pi $. To do this, go from the point A, go along the circumference in the negative direction of the path length of $ \frac {3} {2}\pi $. This path will end at point B. "
+END
+"---"
+END
+"==="
+"PAGE 4
+$ \bf Remark \1. $
+ $ \ \ \ \$ Working with a numeric line, usually do not say $\it \hbox{a point of the line corresponding to the number x}$, but say $ point \ x$. We will adhere to the same agreement even when working with a numerical circle: the phrase $point\ t$ means that it is a point of a circle that corresponds to the number t. "
+END
+"---"
+END
+"==="
+"PAGE 5
+$ \bf Example \ 2. $
+$ \ \ \ \$ Find on the numeric circle the points corresponding to the numbers: $ \frac {\pi} {6} $; $ \frac {\pi} {4} $; $ \frac {\pi} {3} $
+$
+$ \bf Solution $
+Dividing the first quarter AB of the numerical circle into three equal parts by the points K and P, we obtain $ K = K (\frac {1} {6}\pi) $
+ $ P = P (\frac {1} {3}\pi) $. Dividing the arc AB in half by the point M yields $ M = M (\frac {1} {4}\pi) $ (Figure 99)
+$ $\pi
+$ \bf Figure \ 99 $
+$ $
+$ $ "
+\set2D(-2, 2, -1.1, 1.1, 'BWES');f = \paramPlot([\sin(x),\cos(x) ], [0, 2\pi]);f1 = \pointsPlot ([[1,0,-1,0,0.7,-0.7,0.86,0.4,0.4,-0.86],[0,1,0,-1,0.7,0.7,0.5,0.91,-0.91,-0.5]], ['A','B','C','D','M','L','K','P','S','N'],[1,1,7,4,0,0,0,0,0,5]);
+ \showPlots([f, f1]);
+"---"
+
+"==="
+"PAGE 6
+$ \bf Example \3. $
+ $ \ \ \ \$ Find on the number circle the points corresponding to the numbers $ \frac {-5 \pi} {4} $; $ \frac {7 \pi} {6} $; $ \frac {5 \pi} {3} $
+$ $
+$ \bf Solution $
+We use figure 99. Putting the $ AM $ (its length is $ \frac {\pi} {4} $) from the point $ A $ five times in the negative direction, we obtain the point $ L $ - the middle of the arc $ BC $. Thus, $ L = L (\frac {-5 \pi} {4}) $
+ Putting the arc $ AK $ (its length is $ \frac {\pi} {6}) $ from the point $ A $ seven times in the positive direction, we get to the point $ N $, which belongs to the third quarter - Arc $ CD $, with $ CN = \frac {\pi} {6} $ (the third part of the arc $ CD $). Thus, $ N = N (\frac {7 \pi} {6}) $ We take into account that $ \frac {5 \pi} {3} = \frac {10 \pi} {6} $
+ Postponing the arc $ AK $ (its length is $ \frac {\pi} {6} $) from the point $ A $ ten times in the positive direction, we get to the point $ S $, which belongs to the fourth quarter - the arc $ DA $, And $ DS = \frac {\pi} {6} $ (the third part of the arc $ DA $). So, $ S = S (\frac {5 \pi} {3}) $ "
+END
+"---"
+END
+"==="
+"PAGE 7
+$ \bf Remark \ 2. $
+$ $
+ $ \ \ \ \$ Pay attention to some liberties in using the mathematical language. It is clear that the arc $ AK $ and the length of the arc $ AK $ are different things (the first concept is a geometric figure, and the second is a number). But both are denoted the same: $ AK $. Moreover, if the points A and K are joined by a segment, then the resulting segment and its length are also denoted by $ AK $. Usually from the context it is clear what meaning is put into the notation (arc, arc length, segment or length of the segment).
+$ $
+ $ \ \ \ \$ Especially often on a numeric circle you have to look for points corresponding to the numbers $ \frac {\pi} {6} $; $ \frac {\pi} {4} $; $ \frac {\pi} {3} $; $ \frac {\pi} {2} $ and their multiple (that is, $ \frac {5 \pi} {6} $; $ \frac {3 \pi} {4} $; $ \frac {2 \pi} {3} $; $ \frac {9 \pi} {2} $, etc. Therefore, two layouts of the numeric circle are very useful.)
+
+$ $
+The first layout.
+Each of the four fourths of the numerical circle is divided into two equal parts, and around each of the available eight points are written their "names" (Figure 100).
+$ $
+The second layout.
+ $ \ \ \ \$ Each of the four fourths of the numerical circle is divided into three equal parts, and around each of the available twelve points are written their "names" (Figure 101).
+It should be noted that you can assign other names to the selected points on both layouts. Thus, the number $ - \frac {\pi} {4} $ corresponds to the middle of the fourth quarter. This point on the first layout was given a "name" $ ​​\frac {7 \pi} {4} $, but as you can see, we could assign it a "name" $ ​​- \frac {\pi} {4} $.
+$ $
+ $ \ \ \ \$ In general, moving along the first breadboard model from point 0 in a clockwise direction, we get for the eight points in the drawing, respectively:
+0; $ - \frac {\pi} {4} $; $ - \frac {\pi} {2} $; $ - \frac {3 \pi} {4} $; $ - \pi $; $ - \frac {5 \pi} {4} $; $ - \frac {3 \pi} {2} $; $ - \frac {7 \pi} {4} $.
+$ $
+ $ \ \ \ \$ Similarly, moving along the second layout from the point 0 clockwise, we obtain for the twelve points available in the drawing, respectively: 0; $ - \frac {\pi} {6} $; $ - \frac {\pi} {3} $; $ - \frac {\pi} {2} $; $ - \frac {2 \pi} {3} $; $ - \frac {5 \pi} {6} $; ...; $ - \frac {11 \pi} {6} $.
+$ $
+ In all the various examples, the lengths of the arcs were expressed by some parts of the number $ \pi $, which is quite understandable: the length of the unit circle is $ 2 \pi $, and if we divide the circle or its quarter into equal parts, we obtain arcs, lengths Which are expressed by fractions of the number $ \pi $. But, of course, one can find on the unit circle a point $ E $ such that the length of the arc $ AE $ is equal to 1. We argue as follows:
+
+$ \Pi = $ 3.14; $ \frac {\pi} {3} = 3,14 / 3 = $ 1.047;
+$ \frac {\pi} {4} = 3,14 / 4 = $ 0.785.
+$ $
+ $ \ \ \ \$ Thus, $ \frac {\pi} {4} <1 <\frac {\pi} {3} $. Let's turn to figure 99. Point $ E $, such that $ AE = 1 $, is located between points M and P, closer to point P. We can not pinpoint the position of point E on the circle, but this, however, is not so much important.
+Reasoning in a similar way, we conclude that on a unit circle one can find a point $ E_1 $ for which $ AE_1 $ = 1 and a point $ E_2 $ for which $ AE_2 = 2 $ and a point $ E_3 $ for which $ AE_3 = 4 $ and a point $ E_4 $ for which $ AE_4 = 4 $ and a point $ E_5 $ for which $ AE_5 = 5 $ and a point $ E6 $ for which $ AE_6 = 6 $. In Fig. 102, (approximately) the corresponding points are marked (for orientation each of the quarters of the unit circle is divided by dashes into three equal parts).
+$ $
+$ \bf Drawing \ 100 $
+$ $
+$ $ "
+\set2D(-2, 2, -2, 2, 'BWES');f = \paramPlot([\sin(x),\cos(x)], [0, 2\pi]);f1 = \pointsPlot ([[0.7,0.7,-0.7,-0.7,1,0,-1,0],[0.7,-0.7,-0.7,0.7,0,1,0,-1]], ['П/4','7П/4','5П/4','3П/4','0','П/2','П','3П/2'],[1,3,7,3,1,0,7,4]); \showPlots([f, f1]);
+"---"
+
+"==="
+"PAGE 7.1 Figure 101"
+\set2D(-1.2, 1.2, -1.2, 1.2, 'ESBW');f1 = \paramPlot([\sin(x), \cos(x)], [0, 2\pi]);x1=\value(\cos(\pi/3));y1=\value(\sin(\pi/3));f2 = \pointsPlot ([[x1],[y1]],['П/3']);x2=\value(\sin(\pi/3));y2=\value(\cos(\pi/3));f3 = \pointsPlot ([[x2],[y2]],['П/6']);
+x3=\value(\cos(5\pi/3));y3=\value(\sin(5\pi/3));f4 = \pointsPlot ([[x3],[y3]],['5П/3'],[3]);
+x4=\value(\cos(11\pi/6));y4=\value(\sin(11\pi/6));f5 = \pointsPlot ([[x4],[y4]],['11П/6'],[3]);
+x5=\value(\cos(-4\pi/3));y5=\value(\sin(4\pi/3));f6 = \pointsPlot ([[x5],[y5]],['4П/3']);
+x6=\value(\cos(-7\pi/6));y6=\value(\sin(7\pi/6));f7 = \pointsPlot ([[x6],[y6]],['7П/6']);
+x7=\value(\cos(-2\pi/3));y7=\value(\sin(2\pi/3));f8 = \pointsPlot ([[x7],[y7]],['2П/3'],[7]);
+x8=\value(\cos(-5\pi/6));y8=\value(\sin(5\pi/6));f9 = \pointsPlot ([[x8],[y8]],['5П/6'],[7]);
+f10 = \pointsPlot ([[x9],[y9]], ['0'],[1]);x9=\value(1);y9=\value(0);f11 = \pointsPlot ([[x10],[y10]], ['П/2']);x10=\value(0);y10=\value(1);
+f12 = \pointsPlot ([[x11],[y11]], ['П'],[7]);x11=\value(-1);y11=\value(0);f13 = \pointsPlot ([[x12],[y12]], ['3П/2'],[4]);x12=\value(0);y12=\value(-1);\showPlots([f1, f2, f3, f4, f5, f6, f7, f8, f9,f10,f11,f12,f13]);
+"---"
+
+"==="
+"PAGE 7.2 Figure 102"
+\set2D(-2, 2, -1.1, 1.1, 'BWES');f1 = \paramPlot([\sin(x),\cos(x) ], [0, 2\pi]);
+x1=\value(\cos(\pi/3));y1=\value(\sin(\pi/3));f2 = \pointsPlot ([[x1],[y1]], ['E1']);
+x2=\value(\sin(\pi/3));y2=\value(\cos(\pi/3));f3 = \pointsPlot ([[x2],[y2]], ['|']);
+x3=\value(\cos(11\pi/6));y3=\value(\sin(11\pi/6));f4 = \pointsPlot ([[x3],[y3]], ['E6'],[3]);
+x4=\value(\cos(5\pi/3));y4=\value(\sin(5\pi/3));f5 = \pointsPlot ([[x4],[y4]], ['E5'],[3]);
+x5=\value(\cos(-4\pi/3));y5=\value(\sin(4\pi/3));f6 = \pointsPlot ([[x5],[y5]], ['E4']);
+x6=\value(\cos(-7\pi/6));y6=\value(\sin(7\pi/6));f7 = \pointsPlot ([[x6],[y6]], ['|']);
+x7=\value(\cos(-5\pi/6));y7=\value(\sin(5\pi/6));f8 = \pointsPlot ([[x7],[y7]], ['E3'],[4]);
+x8=\value(\cos(-2\pi/3));y8=\value(\sin(2\pi/3));f9 = \pointsPlot ([[x8],[y8]], ['E2'],[7]);
+\showPlots([f1, f2, f3, f4, f5, f6, f7, f8, f9]);
+"---"
+
+"==="
+"PAGE 7.3 Figure 103"
+\set2D(-1.2, 1.2, -1.2, 1.2, 'ESBW');f = \paramPlot([\sin(x),\cos(x) ], [0, 2\pi]); x1=\value(\cos(7\pi/4));y1=\value(\sin(7\pi/4));f1 = \pointsPlot ([[1,0,-1,0,0.8],[0,1,0,-1,-0.6]], ['A','B','C','D','M(-7)'],[2,1,6,4,3]); \showPlots([f, f1]);
+"---"
+
+"==="
+"PAGE 8
+$ \bf Example \ 4. $
+Find on the numeric circle a point corresponding to the number $ -7 $.
+$ $
+$ \bf Solution. $
+ $ \ \ \ \$ We need to go from the point $ A $ and move in the negative direction (in the clockwise direction), go around the circumference of the path length of 7. The length of one circle is approximately 6.28, so you need to go (in The same direction) a path approximately equal to 0.72. What is this arc? Its length is less than the number $ \frac {\pi} {4} $, since $ \frac {\pi} {4} $ = 0.785. The point $ M = M (-7) $ is marked in Figure 103 (we did not reach the middle of the fourth quarter).
+$ $
+ $ \ \ \ \$ So, on a numeric circle, as on a number line, to each real number there corresponds one point (only on the line it is easier to find than on a circle). But for the number line, the reverse is also true: each point corresponds to a single number. For a numeric circle, this is not true: above, we have repeatedly convinced ourselves of this. The following assertion holds for the number circle.
+If the point $ M $ of the numerical circle corresponds to the number $ t $, then it corresponds to a number of the form $ t + 2 \pi k $.
+$ $
+ $ \ \ \ \$ In fact, $ 2 \pi $ is the length of a numeric (unit) circle, and the integer $ | k | $ can be considered as the number of complete circumvention rounds in one direction or another. If, for example, $ k = 3 $, then it means that we make three rounds of a circle in the positive direction; If $ k = -7 $, then it means that we make seven rounds of the circle in the negative direction. If we are at the point M, then, after making a further k rounds of circumference, we again find ourselves at point M. So:
+$ M (t = M (t + 2 \pi k) $
+$ $
+ $ \ \ \ \$ On two mock-ups of a numeric circle (Fig. 100,101), only the principal names of the points are given - the numbers belonging to the segment $ [0; 2 \pi] $, that is, the numbers that arise when the circumference is first traversed in the positive direction . In fact, the point $ \frac {\pi} {4} $ has infinitely many names:
+$ T = \frac {\pi} {4} +2 \pi k $; At the point $ \frac {5 \pi} {6} $ there are also infinitely many names: $ t = \frac {5 \pi} {6} + 2 \pi k $, etc. "
+END
+"---"
+END
+"==="
+"PAGE 10
+$ \bf Example \ 5. $
+Find a point on the number circle: a) $ 19 \frac {\pi} {4} $; B) $ - 37 \frac {\pi} {6} $.
+$ $
+$ \bf Solution. $
+A) $ 19 \frac {\pi} {4} = (4+ \frac {3} {4}) * \pi = 4 \pi + \frac {3 \pi} {4} = \frac {3 \pi } {4} + \frac {2 \pi} {2} $
+Hence, the number $ \frac {19 \pi} {4} $ corresponds to the same point on the numeric circle as to the number $ \frac {3 \pi} {4} $ - this is the middle of the second quarter (Figure 100)
+$ $
+B) $ -37 \frac {\pi} {6} = - (6+ \frac {1} {6}) * \pi = -6 \pi - \frac {\pi} {6} = - \frac {\Pi} {6} + 2 \pi * (- 3) $
+Hence, the same point as the number $ -37 \frac {\pi} {6} $ corresponds to the number $ - \frac {\pi} {6} $ (or to the number $ \frac {11 \pi} {6} $ in Figure 101). "
+END
+"---"
+END
+"==="
